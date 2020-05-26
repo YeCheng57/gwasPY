@@ -10,6 +10,7 @@ def countAllele(line = '', samGenotypeStartsCol = 9, showGT = False, delim = '\t
         return ['1','1'] 
     line_splited = line.strip().split(delim)
     genotype_info_concatenate = ''.join(line_splited[samGenotypeStartsCol:])
+#    print(genotype_info_concatenate)
     refCount = genotype_info_concatenate.count('0')
     altCount = genotype_info_concatenate.count('1')
     returnValue = line_splited[:5]
